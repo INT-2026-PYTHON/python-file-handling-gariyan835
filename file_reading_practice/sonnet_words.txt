@@ -80,3 +80,42 @@ see
 this
 gives
 life
+# List of words based on the single-word lines in the image
+words = [
+    "Shall", "I", "compare", "thee", "to", "a", "summer's", "day?",
+    "Thou", "art", "more", "lovely", "and", "more", "temperate:",
+    "Rough", "winds", "do", "shake", "the", "darling", "buds", "of", "May,",
+    "And", "summer's", "lease", "hath", "all", "too", "short", "a", "date:",
+    "Sometime", "too", "hot", "the", "eye", "of", "heaven", "shines,",
+    "And", "often", "is", "his", "gold", "complexion", "dimm'd;",
+    "And", "every", "fair", "from", "fair", "sometime", "declines,",
+    "By", "chance", "or", "nature's", "changing", "course", "untrimm'd;",
+    "But", "thy", "eternal", "summer", "shall", "not", "fade",
+    "Nor", "lose", "possession", "of", "that", "fair", "thou", "ow'st;",
+    "Nor", "shall", "Death", "brag", "thou", "wand'rest", "in", "his", "shade,",
+    "When", "in", "eternal", "lines", "to", "time", "thou", "grow'st:",
+    "So", "long", "as", "men", "can", "breathe", "or", "eyes", "can", "see,",
+    "So", "long", "lives", "this", "and", "this", "gives", "life", "to", "thee."
+]
+
+# Standard Shakespearean sonnet has 14 lines
+# We can join the words into their traditional lines
+sonnet_lines = [
+    " ".join(words[0:8]),   # Line 1
+    " ".join(words[8:15]),  # Line 2
+    " ".join(words[15:23]), # Line 3
+    " ".join(words[23:33]), # Line 4
+    " ".join(words[33:41]), # Line 5
+    " ".join(words[41:48]), # Line 6
+    " ".join(words[48:55]), # Line 7
+    " ".join(words[55:63]), # Line 8
+    " ".join(words[63:71]), # Line 9
+    " ".join(words[71:80]), # Line 10
+    " ".join(words[80:89]), # Line 11
+    " ".join(words[89:97]), # Line 12
+    " ".join(words[97:106]), # Line 13
+    " ".join(words[106:])    # Line 14
+]
+
+# Print the reconstructed sonnet
+print("\n".join(sonnet_lines))
