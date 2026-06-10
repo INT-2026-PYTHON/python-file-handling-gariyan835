@@ -40,3 +40,23 @@ Explanation:
 =================================================
 
 """
+
+def find_vowel_words(filename):
+    vowels = set("aeiou")
+    count = 0
+    
+    try:
+        with open(filename, 'r') as file:
+            for line in file:
+                word = line.strip()
+            
+                if vowels.issubset(set(word.lower())):
+                    print(word)
+                    count += 1
+        
+        print(f"Total words with all vowels: {count}")
+        
+    except FileNotFoundError:
+        print(f"Error: {filename} not found.")
+
+find_vowel_words('sowpods.txt')

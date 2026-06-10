@@ -28,3 +28,21 @@ day
 eyes
 more
 banana
+words = [
+    "aardvark", "buzz", "civic", "continuum", "deified", 
+    "duumvir", "education", "facetious", "hello", "level", 
+    "malayalam", "moon", "muumuu", "noon", "puppy", 
+    "python", "racecar", "radar", "rotator", "sequoia", 
+    "shall", "summer", "thee", "unequivocal", "vacuum", 
+    "love", "day", "eyes", "more", "banana"
+]
+
+def analyze_words(word_list):
+    palindromes = [w for w in word_list if w == w[::-1]]
+    double_letters = [w for w in word_list if any(w[i] == w[i+1] for i in range(len(w)-1))]
+    
+    print(f"--- Analysis of {len(word_list)} Words ---")
+    print(f"Palindromes ({len(palindromes)}): {', '.join(palindromes)}")
+    print(f"Double Letters ({len(double_letters)}): {', '.join(double_letters)}")
+
+analyze_words(words)
