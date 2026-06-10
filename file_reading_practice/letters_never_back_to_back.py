@@ -53,3 +53,20 @@ Sorted -> ['b', 'd', 'e', 'h', 'k', 'm', 'n',
 =================================================
 
 """
+letters_seen = set()
+doubled = set()
+
+with open("sowpods.txt", "r") as f:
+    for word in f:
+        word = word.strip().lower()
+
+        for ch in word:
+            if ch.isalpha():
+                letters_seen.add(ch)
+
+        for i in range(len(word) - 1):
+            if word[i] == word[i + 1] and word[i].isalpha():
+                doubled.add(word[i])
+
+answer = sorted(letters_seen - doubled)
+print(answer)
